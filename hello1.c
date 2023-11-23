@@ -22,9 +22,9 @@ void print_hello(unsigned int counter_h1)
 
 	for (i = 0; i < counter_h1; i++) {
 		struct l_struct *l_struct_ex = kmalloc(sizeof(*l_struct_ex), GFP_KERNEL);
-		if (i == 4) {
+
+		if (i == 4)
 			l_struct_ex = 0;
-		}
 		l_struct_ex->timestamp_start = ktime_get();
 		pr_info("Hello, world!\n");
 		l_struct_ex->timestamp_end = ktime_get();

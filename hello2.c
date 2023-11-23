@@ -19,10 +19,6 @@ MODULE_PARM_DESC(counter, "How many times print 'Hello, world!'");
 
 static int __init hello2_init(void)
 {
-//	if (counter > 10) {
-//		pr_err("Parameter is too large, make it <= 10\n");
-//		return -EINVAL;
-//	}
 	BUG_ON(counter > 10);
 
 	if (counter == 0 || (counter >= 5 && counter <= 10))
